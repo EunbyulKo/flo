@@ -18,4 +18,8 @@ public class SongService {
 		return songMapper.list();
 	}
 	
+	public List<Song> getAllSongsWithAlbum()  {
+		return songMapper.listWithAlbum();
+	}
+	
 }
