@@ -41,3 +41,18 @@ NULL이 가능하도록 설정
 MyBatis로 외래키 맵핑시키고 엔티티 클래스로 표현하는 게 아직 좀 서툰거같음
 Mapper클래스로만 작업하고 싶은데 XML을 만들어야하나 고민중
 ```
+
+## 4/6
+1. 구조 다듬기
+
+* Songs 테이블 album_id NOT NULL로 변경
+  * 내부조인으로 변경
+  * Controller에서 album null 체크 간편해짐
+  * 초반부터 구조를 복잡하게 가져가지 않도록
+  
+* 규칙 정하기
+  * 필드 명명
+     * Join 시 별칭을 써야하지만 통일성을 위해 비슷한 이름 사용 (album 테이블의 title, song 테이블의 title)
+  * Entity 클래스
+     * Entity 클래스틑 최대한 객체지향답게 구현 (album_id 필드를 album 참조로 표현)
+     * Entity 클래스와 DB 테이블 사이의 차이는 Mapper에서 Result를 통해 맵핑
