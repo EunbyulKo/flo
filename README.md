@@ -46,10 +46,11 @@ Mapper클래스로만 작업하고 싶은데 XML을 만들어야하나 고민중
 1. 구조 다듬기
 
 * Songs 테이블 album_id NOT NULL로 변경
-  * 내부조인으로 변경
-  * Controller에서 album null 체크 간편해짐
-  * 초반부터 구조를 복잡하게 가져가지 않도록
-  
+```
+  - 내부조인으로 변경
+  - Controller에서 album null 체크 간편해짐
+  - 초반부터 구조를 복잡하게 가져가지 않도록
+```
 * 규칙 정하기
   * 필드 명명
      * Join 시 별칭을 써야하지만 통일성을 위해 비슷한 이름 사용 (album 테이블의 title, song 테이블의 title)
