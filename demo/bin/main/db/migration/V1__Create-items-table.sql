@@ -15,7 +15,7 @@ CREATE TABLE Items (
 CREATE TABLE Songs (
   id INT NOT NULL AUTO_INCREMENT,
   title VARCHAR(50) NOT NULL,
-  album_id INT,
+  album_id INT NOT NULL,
   PRIMARY KEY (id),
   FOREIGN KEY (album_id) REFERENCES Albums (id)
 ) DEFAULT CHARSET=utf8mb4;

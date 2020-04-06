@@ -16,6 +16,7 @@ public interface SongMapper {
 	
 	@Select("SELECT *, ALBUMS.title AS album_title FROM SONGS LEFT OUTER JOIN ALBUMS ON SONGS.album_id=ALBUMS.id")
 	@Results({
+		  @Result(column="album_id", property="album.id"),
 		  @Result(column="album_title", property="album.title")
 		})
 	List<Song> listWithAlbum();

@@ -6,8 +6,6 @@ public class Song {
   	
   	private String title;
   	
-  	private Integer albumId;
-  	
   	private Album album;
 
 	public Integer getId() {
@@ -24,14 +22,6 @@ public class Song {
 	
 	public void setTitle(String title) {
 		this.title = title;
-	}
-	
-	public Integer getAlbumId() {
-		return albumId;
-	}
-
-	public void setAlbumId(Integer albumId) {
-		this.albumId = albumId;
 	}
 
 	public Album getAlbum() {
