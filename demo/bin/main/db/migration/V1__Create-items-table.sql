@@ -28,3 +28,17 @@ CREATE TABLE Albums (
   PRIMARY KEY (id)
 ) DEFAULT CHARSET=utf8mb4;
 
+
+CREATE TABLE Playlists (
+  id INT NOT NULL AUTO_INCREMENT,
+  name VARCHAR(50) NOT NULL,
+  PRIMARY KEY (id)
+) DEFAULT CHARSET=utf8mb4;
+
+
+CREATE TABLE PlaylistsSongs (
+  song_id INT NOT NULL,
+  playlist_id INT NOT NULL,
+  PRIMARY KEY (song_id, playlist_id)
+) DEFAULT CHARSET=utf8mb4;
+

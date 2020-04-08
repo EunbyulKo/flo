@@ -20,4 +20,10 @@ public interface SongMapper {
 		  @Result(column="album_title", property="album.title")
 		})
 	List<Song> listWithAlbum();
+	
+	@Select("SELECT * " + 
+			"FROM SONGS " + 
+			"INNER JOIN (SELECT * FROM PLAYLISTSSONGS WHERE playlist_id=#{id}) PS " + 
+			"ON PS.song_id = SONGS.id;")
+	List<Song> findSongsByPlaylistId(String id);
 }
