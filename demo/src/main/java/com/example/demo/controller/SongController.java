@@ -13,9 +13,8 @@ import org.springframework.stereotype.*;
 import org.springframework.ui.Model;
 
 @Controller
+@RequestMapping("/song/*")
 public class SongController {
-	
-	private static final String PATH = "song/";
 	
 	@Autowired
 	private SongService songService;
@@ -29,7 +28,7 @@ public class SongController {
 		
 		model.addAttribute("titles", titles);
 		
-		return PATH + "songTitle";
+		return "songTitle";
 	}
 	
 	@RequestMapping("/songAlbumTitle")
@@ -41,6 +40,6 @@ public class SongController {
 		
 		model.addAttribute("titles", titles);
 		
-		return PATH + "songTitle";
+		return "songTitle";
 	}
 }
