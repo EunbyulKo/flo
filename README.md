@@ -24,7 +24,7 @@
 한 곡이 여러 앨범에 수록되지 않음
 같은 곡이라도 다른 앨범에 수록될 경우 다른 곡으로 취급
 
-<설계 >
+<설계>
 다대일 : Songs-Albums
 조인테이블과 조인컬럼 중에 조인칼럼 이용
 NULL이 가능하도록 설정
@@ -57,3 +57,19 @@ Mapper클래스로만 작업하고 싶은데 XML을 만들어야하나 고민중
   * Entity 클래스
      * Entity 클래스틑 최대한 객체지향답게 구현 (album_id 필드를 album 참조로 표현)
      * Entity 클래스와 DB 테이블 사이의 차이는 Mapper에서 Result를 통해 맵핑
+     
+## 4/8
+1. Playlists 테이블 추가, PlaylistsSongs 테이블 추가
+```
+<설계>
+다대다 : Songs-Playlists
+조인테이블 이용
+복합 키를 이용해 중복 방지
+
+Entity 클래서에서 Song에서는 Playlist를 아직 사용할 필요가 없다고 가정
+Playlists에만 List<Song> 컬렉션 추가
+
+<기타>
+Mapper클래스로만 작업하고 싶은데 XML을 만들어야하나 고민중222222
+컬렉션 맵핑이 까다롭고 XML 예제는 많은데 어노테이션 예제가 많이 없음
+```
