@@ -1,5 +1,12 @@
 # flo
 
+## 기술스택
+* Spring Boot 2.1.4
+* Java 1.8
+* Gradle 5.2.1
+* MySQL 8.0.15
+* Mybatis
+
 ## 2/6
 
 1. 이클립스에 Gradle 프로젝트 import 및 서버 실행
